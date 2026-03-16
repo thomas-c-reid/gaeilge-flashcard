@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  h1, h2, h3 {
+    font-family: 'Nunito', system-ui, sans-serif;
+  }
+}
+
+/* Indeterminate progress bar animation */
+@keyframes indeterminate {
+  0% {
+    left: -45%;
+    width: 45%;
+  }
+  60% {
+    left: 100%;
+    width: 45%;
+  }
+  100% {
+    left: 100%;
+    width: 45%;
+  }
+}
+
+.animate-indeterminate {
+  position: absolute;
+  height: 100%;
+  border-radius: 9999px;
+  background-color: #0F6E56;
+  animation: indeterminate 1.5s ease-in-out infinite;
+}
+
+/* Prevent text selection during card swipe */
+.no-select {
+  -webkit-user-select: none;
+  user-select: none;
+}
